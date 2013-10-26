@@ -103,15 +103,16 @@
 \begin{itemize}
 	\parskip=0.1em
 
+{% for school in EDUCATION %}
 	\item 
 	\splitrow
-		{\textbf{ {{ EDUCATION.name }} }}
-		{\textbf{ {{ EDUCATION.location }} }}
+		{\textbf{ {{ school.name }} }}
+		{\textbf{ {{ school.location }} }}
 	\\
 	\splitrow
-		{\emph{ {{ EDUCATION.degree }} }}
-		{\emph{ {{ EDUCATION.dates }} }}
-
+		{\emph{ {{ school.degree }} }}
+		{\emph{ {{ school.dates }} }}
+{% endfor %}
 \end{itemize}
 
 \end{document}

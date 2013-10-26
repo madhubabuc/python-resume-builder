@@ -22,6 +22,8 @@ WORK EXPERIENCE
 
 EDUCATION
 =========
+{% for school in EDUCATION %}
+{{ school.name }}
+{{ school.degree }}, {{ school.dates }}
 
-{{ EDUCATION.name }}
-{{ EDUCATION.degree }}, {{ EDUCATION.dates }}
+{% endfor %}

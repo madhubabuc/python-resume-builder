@@ -77,11 +77,19 @@ RESUME = {
             },
         ],
 
-    'EDUCATION' : {
-        'name' : "Quis Pretium Est",
-        'location': "Everywhere, WA",
-        'degree' : "BA, Computer Science", 
-        'dates' : "Graduated 5/2004",
+    'EDUCATION' : [
+        {
+            'name' : "Quis Pretium Est",
+            'location': "Everywhere, WA",
+            'degree' : "BA, Computer Science", 
+            'dates' : "Graduated 5/2004",
         },
-    }
+        {
+            'name': "Other School",
+            'location': "Boston, MA",
+            'degree': "MA, Computer Science",
+            'dates': "Graduated 5/2006",
+        }
+    ]
+}
 

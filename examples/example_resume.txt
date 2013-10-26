@@ -38,3 +38,8 @@ EDUCATION
 
 Quis Pretium Est
 BA, Computer Science, Graduated 5/2004
+
+
+Other School
+MA, Computer Science, Graduated 5/2006
+

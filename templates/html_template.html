@@ -34,9 +34,11 @@
 
 
     <h2>EDUCATION</h2>
+    {% for school in EDUCATION %}
     <p>
-      {{ EDUCATION.name }}<br/>
-      {{ EDUCATION.degree }}, {{ EDUCATION.dates }}<br/>
+      {{ school.name }}<br/>
+      {{ school.degree }}, {{ school.dates }}<br/>
     </p>
+    {% endfor %}
   </body>
 </html>
