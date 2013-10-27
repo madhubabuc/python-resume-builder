@@ -14,9 +14,10 @@ import jinja2
 def main():
     """render templates using sourcefile.
 
-takes the arg passed at the command line and saves output
-there.  uses export type to determine the template name
-and what filename to give the output."""
+    takes the arg passed at the command line and saves output
+    there.  uses export type to determine the template name
+    and what filename to give the output.
+    """
 
     # parse argument filepath
     SOURCE_FILE = sys.argv[1]
@@ -31,11 +32,11 @@ and what filename to give the output."""
 
     for ttype in template_types:
         # open the template file, make it an object
-        template_string = open('templates/' + ttype + '_template.' + ttype, 'r').read()
+        template_string = open('templates/%s_template.%s' % (ttype, ttype), 'r').read()
         template = jinja2.Template(template_string)
 
         # write the rendered template to file
-        output = open(SAVE_AS + '.' + ttype, 'w')
+        output = open('%s.%s' % (SAVE_AS, ttype), 'w')
         output.write(template.render(resume_module.RESUME, mode=ttype))
         output.close()
 
