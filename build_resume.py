@@ -10,21 +10,6 @@ import os.path
 
 import jinja2
 
-def add_ascii_data(resume):
-    """takes a resume datastructure and add some data to the
-    hashes for ascii formatting.
-
-This function exists because the source file does not store 
-whitespace information, but it's required for the ascii output.
-It's easiest to put it in the data structure and let the
-templates read and render it as necessary."""
-
-    for hash in resume['TECHNICAL_SKILLS']:
-        hash['ascii_whitespace'] = " " * (25 - len(hash['category']))
-
-    for hash1 in resume['WORK_EXPERIENCE']:
-        for hash2 in hash1['positions']:
-            hash2['ascii_whitespace'] = " " * (26 - len(hash2['name']))
 
 def main():
     """render templates using sourcefile.
@@ -40,8 +25,6 @@ and what filename to give the output."""
 
     # import the argument as a python module
     resume_module = imp.load_source('resume', SOURCE_FILE)
-
-    add_ascii_data(resume_module.RESUME)
 
     # render templates
     template_types = ['html','tex','txt']

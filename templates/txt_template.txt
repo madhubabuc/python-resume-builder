@@ -6,7 +6,7 @@
 
 TECHNICAL SKILLS
 ================
-{% for skill in TECHNICAL_SKILLS %}{{ skill.category }}:{{ skill.ascii_whitespace }}{{ skill.entry }}
+{% for skill in TECHNICAL_SKILLS %}{{ "%-32s%-s"|format(skill.category + ":", skill.entry) }}
 {% endfor %}
 
 WORK EXPERIENCE
@@ -15,7 +15,7 @@ WORK EXPERIENCE
 {{ job.name }} - {{ job.location }}
 -----------------------------------------------------------
 {% for position in job.positions %}
-{{ position.name }}{{ position.ascii_whitespace }}{{ position.dates }}{% endfor %}
+{{ "%-32s%-s"|format(position.name, position.dates) }}{% endfor %}
 {% for duty in job.duties %}
 * {{ duty }}{% endfor %}
 {% endfor %}

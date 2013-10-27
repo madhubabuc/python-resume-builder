@@ -4,22 +4,29 @@ This project uses a python template system to produce many output formats of the
   
 REQUIREMENTS
 ------------
-- *nix                        (tested with Debian Wheezy)  
-- Python                      (tested with 2.7.3)  
-- Jinja                       (tested with 2.6, via debian package python-jinja2)  
+
+For HTML and TXT exports:
+- python 2.7
+- jinja2
+
+For PDF:
 - pdflatex                    (tested with debian package texlive-full)  
-- a *LOT* of LaTeX packages.  (tested with the 2GB+ texlive-full package, rather than grabbing individual libraries)
+- a *LOT* of LaTeX packages.  (tested with debian package texlive-full package)  
   
 INSTRUCTIONS
 ------------
-From the project directory, run:  
-  
-~$ ./build_resume.py [source_file.py]  
-~$ pdf_latex [source_file.tex]  
+From the project directory, run:
+```
+~$ sudo pip install requirements.txt
+~$ ./build_resume.py [source_file.py]
+```
+For pdf export:
+```
+~$ pdflatex [source_file.tex]
+```
   
 TO-DO
 -----
 - Update main script to validate arguments  
 - Add usage statement to main script
-- change resume source_file format to a friendlier format than .py.
-- add octocat icon next to github url!
+- add support for JSON resumes
