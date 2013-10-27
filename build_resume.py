@@ -36,7 +36,7 @@ def main():
         template = jinja2.Template(template_string)
 
         # write the rendered template to file
-        output = open('%s.%s' % (SAVE_AS, ttype), 'w')
+        output = open('output/%s.%s' % (SAVE_AS, ttype), 'w')
         output.write(template.render(resume_module.RESUME, mode=ttype))
         output.close()
 
